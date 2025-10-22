@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro-Gimnasio</title>
+<link rel="stylesheet" href="../Gimnasio/CSS/estilo.css">
+
+</head>
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="login" class="contenedor">
+  <h2>Inicio de Sesión</h2>
+  <p>Ingrese sus credenciales para acceder:</p>
+
+  <label>Usuario:</label>
+  <input type="text" id="usuario" placeholder="Ej: admin" required>
+
+  <label>Contraseña:</label>
+  <input type="password" id="contrasena" placeholder="Ej: 1234" required>
+
+  <button onclick="iniciarSesion()">Ingresar</button>
+</div>
+
+<!-- ================= PÁGINA DEL GIMNASIO ================= -->
+<div id="paginaGimnasio">
+  <!-- ====== MENÚ SUPERIOR ====== -->
+  <header>
+    <img src="../Gimnasio/IMG/logo.jpeg" alt="Logo del Gimnasio"> <!-- Cambia por tu logo -->
+    <h1>Power House GYM </h1>
+
+    <div class="menu-botones">
+      <button onclick="exportarRegistros()">⬇️ Descargar</button>
+      <button onclick="document.getElementById('archivo').click()">⬆️ Cargar</button>
+      <button class="btn-salir" onclick="cerrarSesion()">Salir</button>
+    </div>
+
+    <input type="file" id="archivo" accept=".json" style="display:none;" onchange="importarRegistros(event)">
+  </header>
+
+  
+ <div class="caja-formulario">
+  <h2>Registro de Clientes</h2>
+  <form id="formulario">
+    <label>Nombre del Cliente:</label>
+    <input type="text" id="nombre" required>
+
+    <label>Fecha de Inscripción:</label>
+    <input type="date" id="fecha" required>
+
+    <label>Plan:</label>
+    <select id="plan" required>
+      <option value="">Seleccione un plan</option>
+      <option>Elite</option>
+      <option>Deportista</option>
+      <option>Matinal</option>
+    </select>
+
+    <label>Valor del mes ($):</label>
+    <input type="number" id="valor" min="0" required>
+
+    <button type="button" onclick="registrar()">Registrar</button>
+  </form>
+</div>
+
+
+  <table id="tabla">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Plan</th>
+        <th>Valor</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  
+</div>
+
+<script src="../Gimnasio/JS/comportamiento.js"></script>
+
+</body>
+</html>

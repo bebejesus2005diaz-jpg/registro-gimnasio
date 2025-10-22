@@ -1,0 +1,268 @@
+/* ==================== ESTILO GENERAL ==================== */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #dfe9f3, #ffffff);
+  padding: 20px;
+  color: #333;
+  margin: 0;
+}
+
+/* ==================== ENCABEZADO / MENÚ ==================== */
+header {
+  background-color: #d80000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+header h1 {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+
+.menu-botones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-botones button {
+  background: #080808;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.menu-botones button:hover {
+  background: #0056b3;
+}
+
+
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.contenedor {
+  width: 90%;
+  max-width: 400px;
+  margin: 10% auto; /* Centrado horizontal */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* ==================== FORMULARIOS Y BOTONES ==================== */
+input, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #bb6565;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff0101;
+}
+
+/* ==================== TABLA ==================== */
+table {
+  margin-top: 25px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #aaa;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #ff0000;
+  color: white;
+}
+
+/* ==================== BOTONES DE ACCIÓN ==================== */
+.btn-borrar {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-borrar:hover {
+  background-color: darkred;
+}
+
+.btn-salir {
+  background-color: darkorange;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-salir:hover {
+  background-color: #cc7000;
+}
+
+/* ======== CAJA DEL FORMULARIO ======== */
+.caja-formulario {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto 40px auto; /* centrado */
+  text-align: left;
+}
+
+.caja-formulario h2 {
+  text-align: center;
+  color: #d80000;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.caja-formulario label {
+  font-weight: bold;
+  display: block;
+  margin-top: 12px;
+  color: #333;
+}
+
+.caja-formulario input,
+.caja-formulario select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.caja-formulario button {
+  margin-top: 20px;
+  background: #057ae7;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.caja-formulario button:hover {
+  background: #0056b3;
+}
+
+
+
+
+/* ==================== OCULTAR PÁGINA DE GIMNASIO AL INICIO ==================== */
+#paginaGimnasio {
+  display: none;
+}
+
+/* ==================== DISEÑO RESPONSIVE ==================== */
+
+/*  Teléfonos pequeños (pantallas menores a 600px) */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img {
+    width: 80px;
+    height: 80px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .menu-botones {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu-botones button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  table, th, td {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+   .contenedor {
+    width: 95%;
+    margin: 20% auto;
+    padding: 15px;
+  }
+
+  
+}
+
+
+
+/*  Tablets (pantallas de 601px a 900px) */
+@media (max-width: 900px) and (min-width: 601px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .menu-botones {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
